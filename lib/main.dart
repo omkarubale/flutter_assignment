@@ -4,7 +4,7 @@
 // 3) Split the app into three widgets: App, TextControl & Text
 import 'package:flutter/material.dart';
 
-import './app.dart';
+import './text_control.dart';
 
 void main() {
   runApp(MyApp());

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import './textControl.dart';
+import './text_output.dart';
 
 class App extends StatefulWidget {
   @override
@@ -8,11 +8,11 @@ class App extends StatefulWidget {
 }
 
 class _AppState extends State<App> {
-  String displayText = 'This is what we started with';
+  String _displayText = 'This is what we started with';
 
   void _handlePress() {
     setState(() {
-      displayText = 'This is after pressing the button';
+      _displayText = 'This is after pressing the button';
     });
   }
 
@@ -21,8 +21,11 @@ class _AppState extends State<App> {
     return Container(
       child: Column(
         children: <Widget>[
-          TextControl(_handlePress),
-          Text(displayText),
+          RaisedButton(
+            child: Text('Funny button eh!'),
+            onPressed: _handlePress,
+          ),
+          TextOutput(_displayText),
         ],
       ),
     );
